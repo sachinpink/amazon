@@ -7,17 +7,29 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import uiPages.HomePage;
 import uiPages.LoginPage;
+import uiPages.ProductsPage;
 
 public class LoginPageTest extends TestBase
 {
 	LoginPage page;
 	HomePage hpage;
+	ProductsPage produtpge;
 	@Test(dataProvider="loginData")
 	public void login(String userName,String pass) throws InterruptedException
 	{
 		page=new LoginPage(driver);
 		page.movetoAccountLink();
 		page.clickOnSiginIn();
+		page.login(userName, pass);
+		
+		hpage=new HomePage(driver);
+		Thread.sleep(10000);
+		hpage.EnterItemtoSearch("mobiles");
+		Thread.sleep(10000); 
+		
+		produtpge= new ProductsPage (driver);
+		produtpge.selectProduct("samsung");
+		
 	}
 	
 	@DataProvider(name="loginData")

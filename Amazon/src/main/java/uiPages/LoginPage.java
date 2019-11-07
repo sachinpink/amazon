@@ -1,5 +1,4 @@
 package uiPages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -23,7 +22,7 @@ public class LoginPage extends TestBase
 	@FindBy(xpath="//*[@id='nav-link-accountList']")
 	WebElement siginInLink;
 	
-	@FindBy(xpath="////input[@id='ap_email']")
+	@FindBy(xpath="//input[@id='ap_email']")
 	WebElement emailTxt;
 	
 	@FindBy(xpath="//input[@id='continue']")
@@ -34,7 +33,6 @@ public class LoginPage extends TestBase
 	
 	@FindBy(xpath="//input[@id='signInSubmit']")
 	WebElement LoginBtn;
-	
 	
 	public void movetoAccountLink() throws InterruptedException
 	{
@@ -47,6 +45,16 @@ public class LoginPage extends TestBase
 	{
 		siginInLink.click();
 	}
+	public HomePage login(String username,String pass)
+	{
+		emailTxt.sendKeys(username);
+		ContineBtn.click();
+		passordTxt.sendKeys(pass);
+		LoginBtn.click();
+		return new HomePage(driver);	
+		
+	}
 	
+
 
 }

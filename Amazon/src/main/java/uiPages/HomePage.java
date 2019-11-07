@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage 
 {
-	public WebDriver driver;
+    WebDriver driver;
 	
 	public HomePage(WebDriver driver)
 	{
@@ -15,15 +15,18 @@ public class HomePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
+	@FindBy(xpath="//input[@id='twotabsearchtextbox']") 
 	WebElement searchBox;
+	
 		
-    public void EnterItemtoSearch()
+    public ProductsPage EnterItemtoSearch(String ProductCatagory)
     {
-    	searchBox.sendKeys("mobile");
+    	searchBox.sendKeys(ProductCatagory);
     	searchBox.sendKeys(Keys.ENTER);
+    	return new ProductsPage(driver);
     	
     }
+    
     
     
     

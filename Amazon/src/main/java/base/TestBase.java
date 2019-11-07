@@ -20,10 +20,10 @@ public class TestBase
 		options.addArguments("--test-type");
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
-		
+		System.out.print(System.getProperty("os.name"));
 	}
 	@AfterClass
 	public void close()
