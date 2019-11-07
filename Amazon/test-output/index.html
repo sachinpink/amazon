@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\sachin\AppData\Local\Temp\testng-eclipse--317290345\testng-customsuite.xml</span>
+                    <span>C:\Users\sachin\AppData\Local\Temp\testng-eclipse-311204347\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -128,16 +128,15 @@
                   </a> <!-- login(sachinzagade59@gmail.com, 9172362161) -->
                   <span class="method-name">login</span>
                   <span class="parameters">(sachinzagade59@gmail.com, 9172362161)</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //img[starts-with(@alt,&apos;samsung&apos;)]] because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//img[starts-with(@alt,&apos;samsung&apos;)]]&apos; is not a valid XPath expression.
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;ap_email&apos;]&quot;}
   (Session info: chrome=78.0.3904.87)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;SACHIN-PC&apos;, ip: &apos;192.168.43.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\sachin\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d6eaf66c13f9c81e91d26b93168cab50
-*** Element info: {Using=xpath, value=//img[starts-with(@alt,&apos;samsung&apos;)]]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\sachin\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51549}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 430f4a9e7cd0883e08d4a9e5482b3241
+*** Element info: {Using=xpath, value=//input[@id=&apos;ap_email&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -152,8 +151,11 @@ Session ID: d6eaf66c13f9c81e91d26b93168cab50
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at uiPages.ProductsPage.selectProduct(ProductsPage.java:21)
-	at uiTestPages.LoginPageTest.login(LoginPageTest.java:31)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at uiPages.LoginPage.login(LoginPage.java:50)
+	at uiTestPages.LoginPageTest.login(LoginPageTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,7 +189,7 @@ Session ID: d6eaf66c13f9c81e91d26b93168cab50
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sachin\AppData\Local\Temp\testng-eclipse--317290345\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sachin\AppData\Local\Temp\testng-eclipse-311204347\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -240,12 +242,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'uiTestPages.LoginPageTest')
-data.setCell(0, 3, 58867);
+data.setCell(0, 3, 55633);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -280,11 +282,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">login(sachinzagade59@gmail.com, 9172362161)</span>
-                <span class="method-start">18650 ms</span>
+                <span class="method-start">26851 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">close</span>
-                <span class="method-start">77547 ms</span>
+                <span class="method-start">82509 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

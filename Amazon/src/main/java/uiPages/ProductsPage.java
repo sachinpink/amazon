@@ -18,6 +18,7 @@ public class ProductsPage extends TestBase
 	
 	public void selectProduct(String productName)
     {
+		driver.findElement(By.xpath("//img[starts-with(@alt,'Samsung')]")).click();
     	driver.findElement(By.xpath("//img[starts-with(@alt,'"+productName+"')]]")).click();
     	
     }
