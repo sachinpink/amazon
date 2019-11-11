@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase
@@ -23,12 +22,7 @@ public class TestBase
 		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
-		System.out.print(System.getProperty("os.name"));
-	}
-	@AfterClass
-	public void close()
-	{
-		driver.close();
+		System.out.println(System.getProperty("os.name"));
 	}
 	
 	

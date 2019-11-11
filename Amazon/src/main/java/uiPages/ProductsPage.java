@@ -16,11 +16,11 @@ public class ProductsPage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void selectProduct(String productName)
+	public productDetailsPage selectProduct()
     {
-		driver.findElement(By.xpath("//img[starts-with(@alt,'Samsung')]")).click();
-    	driver.findElement(By.xpath("//img[starts-with(@alt,'"+productName+"')]]")).click();
-    	
+    	driver.findElement(By.xpath("//img[starts-with(@alt,'Samsung')]")).click();
+    	//  //img[contains(@alt,'Samsung')]
+       	return new productDetailsPage(driver);
     }
 
 }

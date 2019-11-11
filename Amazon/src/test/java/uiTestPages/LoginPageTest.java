@@ -8,12 +8,14 @@ import base.TestBase;
 import uiPages.HomePage;
 import uiPages.LoginPage;
 import uiPages.ProductsPage;
+import uiPages.productDetailsPage;
 
 public class LoginPageTest extends TestBase
 {
 	LoginPage page;
 	HomePage hpage;
 	ProductsPage produtpge;
+	productDetailsPage prdtdetailspage;
 	@Test(dataProvider="loginData")
 	public void login(String userName,String pass) throws InterruptedException
 	{
@@ -24,11 +26,19 @@ public class LoginPageTest extends TestBase
 		
 		hpage=new HomePage(driver);
 		Thread.sleep(10000);
-		hpage.EnterItemtoSearch("mobiles");
+		hpage.EnterItemtoSearch("samsung mobiles");
 		Thread.sleep(10000); 
 		
 		produtpge= new ProductsPage (driver);
-		produtpge.selectProduct("samsung");
+		produtpge.selectProduct();
+		
+		prdtdetailspage=new productDetailsPage(driver);
+		prdtdetailspage.addToCart();
+		Thread.sleep(30000); 
+		prdtdetailspage.yourCard();
+		Thread.sleep(30000); 
+		prdtdetailspage.deleteItemFromcart();
+		
 		
 	}
 	
