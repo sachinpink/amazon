@@ -1,6 +1,7 @@
 package uiTestPages;
 
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,6 +17,12 @@ public class LoginPageTest extends TestBase
 	HomePage hpage;
 	ProductsPage produtpge;
 	productDetailsPage prdtdetailspage;
+	
+	@BeforeMethod
+	public void launch()
+	{
+		setup();
+	}
 	@Test(dataProvider="loginData")
 	public void login(String userName,String pass) throws InterruptedException
 	{

@@ -5,8 +5,8 @@
     <classes>
       <class name="uiTestPages.LoginPageTest">
         <methods>
-          <include name="setup"/>
           <include name="login" invocation-numbers="0"/>
+          <include name="launch"/>
         </methods>
       </class> <!-- uiTestPages.LoginPageTest -->
     </classes>
