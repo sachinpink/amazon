@@ -19,16 +19,20 @@ public class ExcelReader
 	@SuppressWarnings("deprecation")
 	public void getdata(String FilePath,String sheetName) 
 	{
-			try {
+			try 
+			{
 				fis = new FileInputStream(FilePath);
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
+			} catch (FileNotFoundException e) 
+			{
+				
 				e.printStackTrace();
 			}
-		    try {
+		    try 
+		    {
 				wb=new XSSFWorkbook(fis);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} catch (IOException e)
+		    {
+				
 				e.printStackTrace();
 			}
 		    sheet=wb.getSheet(sheetName);
